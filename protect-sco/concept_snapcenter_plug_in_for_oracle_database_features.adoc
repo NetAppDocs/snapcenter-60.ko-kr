@@ -1,0 +1,94 @@
+---
+permalink: protect-sco/concept_snapcenter_plug_in_for_oracle_database_features.html 
+sidebar: sidebar 
+keywords: plug-in for Oracle features 
+summary: Oracle 데이터베이스용 플러그인은 Linux 또는 AIX 호스트의 Oracle 데이터베이스 및 스토리지 시스템의 NetApp 기술과 통합됩니다. 
+---
+= Oracle Database용 플러그인의 기능
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Oracle 데이터베이스용 플러그인은 Linux 또는 AIX 호스트의 Oracle 데이터베이스 및 스토리지 시스템의 NetApp 기술과 통합됩니다.
+
+* 통합 그래픽 사용자 인터페이스
++
+SnapCenter 인터페이스는 플러그인과 환경 전반에서 표준화와 일관성을 제공합니다. SnapCenter 인터페이스를 사용하면 플러그인 전체에서 일관된 백업, 복원, 복구, 클론 작업을 완료하고, 중앙 집중식 보고 기능을 사용하고, 대시보드 뷰를 한눈에 보고, RBAC(역할 기반 액세스 제어)를 설정하고, 모든 플러그인에 걸쳐 작업을 모니터링할 수 있습니다.
+
+* 자동화된 중앙 관리
++
+백업 및 클론 작업을 예약하고, 정책 기반 백업 보존을 구성하고, 복원 작업을 수행할 수 있습니다. 또한 SnapCenter에서 이메일 경고를 보내도록 구성하여 환경을 사전에 모니터링할 수도 있습니다.
+
+* 무중단 NetApp 스냅샷 기술
++
+SnapCenter는 Oracle Database용 플러그인 및 UNIX용 플러그인과 함께 NetApp 스냅샷 기술을 사용하여 데이터베이스를 백업합니다. 스냅샷은 최소한의 스토리지 공간을 사용합니다.
+
+
+
+Oracle Database용 플러그인은 다음과 같은 이점도 제공합니다.
+
+* 백업, 복원, 클론, 마운트, 마운트 해제, 검증 워크플로우를 활용해 보십시오
+* 호스트에 구성된 Oracle 데이터베이스 자동 검색
+* Oracle RMAN(Recovery Manager)을 사용하여 카탈로그 작성 및 카탈로그 작성 취소 지원
+* RBAC 지원 보안 및 중앙 집중식 역할 위임
++
+권한이 있는 SnapCenter 사용자가 응용 프로그램 수준 권한을 갖도록 자격 증명을 설정할 수도 있습니다.
+
+* 복원 및 클론 작업을 위한 ALM(Archive Log Management) 지원
+* NetApp FlexClone 기술을 사용하여 테스트 또는 데이터 추출을 위한 공간 효율적인 프로덕션 데이터베이스 시점 복사본 생성
++
+클론을 생성하려는 스토리지 시스템에는 FlexClone 라이센스가 필요합니다.
+
+* SAN 및 ASM 환경에서 백업을 생성하는 과정에서 ONTAP의 일관성 그룹(CG) 기능 지원
+* 무중단 및 자동화된 백업 검증
+* 여러 데이터베이스 호스트에서 동시에 여러 백업을 실행할 수 있습니다
++
+단일 작업에서 단일 호스트의 데이터베이스가 동일한 볼륨을 공유하는 경우 스냅샷이 통합됩니다.
+
+* 물리적 인프라와 가상화 인프라 지원
+* NFS, iSCSI, FC(Fibre Channel), RDM, VMDK over NFS 및 VMFS, ASM over NFS, SAN, RDM, VMDK를 지원합니다
+* ONTAP의 선택적 LUN 맵(SLM) 기능 지원
++
+기본적으로 설정된 SLM 기능은 최적화된 경로가 없는 LUN을 주기적으로 검색하여 수정합니다. /var/opt/snapcenter/SCU 등에 있는 scu.properties 파일에서 매개변수를 수정하여 SLM을 구성할 수 있습니다
+
++
+** enable_lunPATH_monitoring 매개변수 값을 false로 설정하여 이 기능을 비활성화할 수 있습니다.
+** LUNPATH_MONITORING_INTERVAL 매개변수에 값(시간)을 할당하여 LUN 경로가 자동으로 수정되는 빈도를 지정할 수 있습니다. SLM에 대한 자세한 내용은 를 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["ONTAP 9 SAN 관리 가이드 를 참조하십시오"^]참조하십시오.
+
+
+* Linux에서 비휘발성 메모리 익스프레스(NVMe) 지원
++
+** NVMe util이 호스트에 설치되어 있어야 합니다.
++
+대체 호스트에 클론 또는 마운트하려면 NVMe util을 설치해야 합니다.
+
+** 백업, 복구, 클론, 마운트, 마운트 해제, RDM과 같은 가상화된 환경을 제외하고 NVMe 하드웨어에서 카탈로그, 카탈로그 해제 및 검증 작업이 지원됩니다.
++
+위의 작업은 파티션이 없거나 단일 파티션이 있는 장치에서 지원됩니다.
+
++
+
+NOTE: 커널에서 기본 다중 경로 옵션을 설정하여 NVMe 장치에 대한 다중 경로 솔루션을 구성할 수 있습니다. 장치 매퍼(DM) 다중 경로가 지원되지 않습니다.
+
+** 백업, 복구, 클론, 마운트, 마운트 해제, 카탈로그, 카탈로그 해제 및 검증 워크플로우 워크플로우가 TCP/IP를 통한 NVMe에서 지원됩니다.
+** 백업, 복구, 클론, 마운트, 마운트 해제, 카탈로그, 비카탈로그 및 검증 워크플로는 TCP/IP를 통해 NVMe에서 생성된 VMDK 레이아웃에서 지원됩니다.
+
+
+* SnapMirror 액티브 동기화(처음에 SnapMirror Business Continuity[SM-BC]로 릴리스)를 지원하므로 전체 사이트 장애 시에도 비즈니스 서비스의 운영을 지속할 수 있으며, 2차 복사본을 사용하여 애플리케이션을 투명하게 페일오버할 수 있습니다. SnapMirror 액티브 동기화로 페일오버를 트리거하는 데 수동 개입이나 추가 스크립팅이 필요하지 않습니다.
+* Oracle 및 그리드 대신 기본이 아닌 모든 사용자를 지원합니다.
++
+기본값이 아닌 사용자를 지원하려면 _FILE/var/opt/snapcenter/sSCO/etc/_에 있는 * sco.properties* 파일에서 매개 변수 값을 수정하여 기본값이 아닌 사용자를 설정해야 합니다.
+
++
+매개 변수의 기본값은 Oracle 및 GRID로 설정됩니다.
+
++
+** db_user=oracle입니다
+** db_group=oinstall을 선택합니다
+** gi_user = 그리드
+** GI_GROUP = oinstall.(Gi_group = 설치
+
+
+

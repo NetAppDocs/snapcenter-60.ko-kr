@@ -1,0 +1,123 @@
+---
+permalink: protect-sco/task_back_up_oracle_resources.html 
+sidebar: sidebar 
+keywords: backup, Oracle database, policy, schedule, verification, resources 
+summary: 자원이 자원 그룹에 속하지 않은 경우 자원 페이지에서 자원을 백업할 수 있습니다. 
+---
+= Oracle 리소스를 백업합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+자원이 자원 그룹에 속하지 않은 경우 자원 페이지에서 자원을 백업할 수 있습니다.
+
+.단계
+. 왼쪽 탐색 창에서 * 리소스 * 를 선택하고 목록에서 해당 플러그인을 선택합니다.
+. 리소스 페이지의 보기 목록에서 * 데이터베이스 * 를 선택합니다.
+. 를 클릭한 image:../media/filter_icon.png["필터 아이콘"]다음 호스트 이름과 데이터베이스 유형을 선택하여 리소스를 필터링합니다.
++
+그런 다음 을 클릭하여 필터 창을 닫을 수 image:../media/filter_icon.png["필터 아이콘"] 있습니다.
+
+. 백업할 데이터베이스를 선택합니다.
++
+데이터베이스 보호 페이지가 표시됩니다.
+
+. 리소스 페이지에서 다음 단계를 수행할 수 있습니다.
++
+.. 확인란을 선택하고 스냅샷 이름에 사용할 사용자 지정 이름 형식을 입력합니다.
++
+예를 `customtext_policy_hostname` 들어, 또는 `resource_hostname`을 입력합니다. 기본적으로 스냅샷 이름에 타임스탬프가 추가됩니다.
+
+.. 백업하지 않을 아카이브 로그 파일의 대상을 지정합니다.
+
+
+. 정책 페이지에서 다음 단계를 수행합니다.
++
+.. 드롭다운 목록에서 하나 이상의 정책을 선택합니다.
++
+
+NOTE: 을 클릭하여 정책을 생성할 수 image:../media/add_policy_from_resourcegroup.gif["기호 추가"]있습니다.
+
++
+선택한 정책에 대한 스케줄 구성 섹션에 선택한 정책이 나열됩니다.
+
+.. image:../media/add_policy_from_resourcegroup.gif["기호 추가"]스케줄 구성 열을 클릭하여 원하는 정책에 대한 스케줄을 구성합니다.
+.. Add schedules for policy_policy_name_창에서 스케줄을 구성하고 을 선택합니다 `OK`.
++
+_policy_name_은 선택한 정책의 이름입니다.
+
++
+구성된 일정이 Applied Schedules 열에 나열됩니다.
+
+
+
+. 확인 페이지에서 다음 단계를 수행하십시오.
++
+.. Load locators * 를 클릭하여 SnapMirror 또는 SnapVault 볼륨을 로드하여 보조 스토리지를 확인합니다.
+.. image:../media/add_policy_from_resourcegroup.gif["기호 추가"]Configure Schedules(일정 구성) 열을 클릭하여 정책의 모든 일정 유형에 대한 확인 일정을 구성합니다. + Add Verification Schedules_policy_name_대화 상자에서 다음 단계를 수행할 수 있습니다.
+.. 백업 후 검증 실행 * 을 선택합니다.
+.. Run scheduled verification * 을 선택하고 드롭다운 목록에서 일정 유형을 선택합니다.
++
+
+NOTE: Flex ASM 설정에서 카디널리티가 RAC 클러스터의 노드 수보다 적은 경우 Leaf 노드에서 검증 작업을 수행할 수 없습니다.
+
+.. 보조 스토리지에서 백업을 확인하려면 * 2차 위치에서 확인 * 을 선택합니다.
+.. 확인 * 을 클릭합니다.
++
+구성된 검증 일정이 Applied Schedules 열에 나열됩니다.
+
+
+
+. 알림 페이지에서 * 이메일 기본 설정 * 드롭다운 목록에서 이메일을 보낼 시나리오를 선택합니다.
++
+보낸 사람 및 받는 사람 전자 메일 주소와 전자 메일의 제목을 지정해야 합니다. 리소스에 대해 수행된 백업 작업의 보고서를 첨부하려면 * 작업 보고서 연결 * 을 선택합니다.
+
++
+
+NOTE: e-메일 알림의 경우 GUI 또는 PowerShell 명령을 사용하여 SMTP 서버 세부 정보를 지정해야 `Set-SmSmtpServer`합니다.
+
+. 요약을 검토하고 * Finish * 를 클릭합니다.
++
+데이터베이스 토폴로지 페이지가 표시됩니다.
+
+. 지금 백업 * 을 클릭합니다.
+. 백업 페이지에서 다음 단계를 수행하십시오.
++
+.. 리소스에 여러 정책을 적용한 경우 정책 드롭다운 목록에서 백업에 사용할 정책을 선택합니다.
++
+필요 시 백업에 대해 선택한 정책이 백업 스케줄과 연결된 경우 스케줄 유형에 지정된 보존 설정에 따라 필요 시 백업이 유지됩니다.
+
+.. 백업 * 을 클릭합니다.
+
+
+. 모니터 * > * 작업 * 을 클릭하여 작업 진행 상황을 모니터링합니다.
+
+
+.작업을 마친 후
+* AIX 설정에서 명령을 사용하여 를 잠그고 명령을 사용하여 백업된 데이터베이스가 상주하는 디스크의 이름을 바꿀 수 `lkdev` `rendev` 있습니다.
++
+해당 백업을 사용하여 복원할 때 장치의 잠금 또는 이름 바꾸기는 복원 작업에 영향을 주지 않습니다.
+
+* 데이터베이스 쿼리 실행 시간이 시간 제한 값을 초과하여 백업 작업이 실패하는 경우 cmdlet을 실행하여 Oracle_SQL_QUERY_TIMEOUT 및 Oracle_PLUMIN_SQL_QUERY_TIMEOUT 매개 변수의 값을 변경해야 `Set-SmConfigSettings` 합니다.
++
+매개 변수 값을 수정한 후 다음 명령을 실행하여 SnapCenter SPL(플러그인 로더) 서비스를 다시 시작합니다 `/opt/NetApp/snapcenter/spl/bin/spl restart`
+
+* 파일을 액세스할 수 없고 확인 프로세스 중에 마운트 지점을 사용할 수 없는 경우 오류 코드 DBV-00100 지정된 파일로 인해 작업이 실패할 수 있습니다. sco.properties 에서 verification_delay 및 verification_retry_count 매개 변수의 값을 수정해야 합니다.
++
+매개 변수 값을 수정한 후 다음 명령을 실행하여 SnapCenter SPL(플러그인 로더) 서비스를 다시 시작합니다 `/opt/NetApp/snapcenter/spl/bin/spl restart`
+
+* MetroCluster 구성에서 SnapCenter는 페일오버 후 보호 관계를 감지하지 못할 수 있습니다.
+* VMDK에서 애플리케이션 데이터를 백업하고 VMware vSphere용 SnapCenter 플러그인의 Java 힙 크기가 충분히 크지 않으면 백업이 실패할 수 있습니다.
++
+Java 힙 크기를 늘리려면 스크립트 파일 _/opt/netapp/init_scripts/scvservice_를 찾습니다. 이 스크립트에서 `do_start method` 명령은 SnapCenter VMware 플러그인 서비스를 시작합니다. 해당 명령을 다음과 같이 업데이트합니다 `Java -jar -Xmx8192M -Xms4096M`.
+
+
+
+.자세한 내용을 확인하십시오
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster 페일오버 후 SnapMirror 또는 SnapVault 관계를 감지할 수 없습니다"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["SnapCenter 작업을 수행하기 위해 Oracle RAC One Node 데이터베이스를 건너뜁니다"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_change_the_state_of_an_Oracle_12c_ASM_database_from_shutdown_to_mount["Oracle 12c ASM 데이터베이스의 상태를 변경하지 못했습니다"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["AIX 시스템의 백업, 복원 및 클론 작업에 대한 사용자 정의 가능한 매개 변수"^] (로그인 필요)
+
