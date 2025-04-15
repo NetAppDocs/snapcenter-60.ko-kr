@@ -5804,7 +5804,6 @@
   <block id="f367d650e57088caf7b808e01235016d" category="inline-link">SnapCenter를 사용하여 SMBR의 보조 스토리지에서 복원하는 방법</block>
   <block id="41b4c689a8b0e3ba8bfecb2a1e608e46" category="list-text"><block ref="41b4c689a8b0e3ba8bfecb2a1e608e46" category="inline-link-rx"></block></block>
   <block id="f004280f6db6ea5f9302c9851388d751" category="inline-link">SMBR을 사용하여 SnapVault에서 Microsoft Exchange Mail 복구</block>
-  <block id="1b0fb59a5bc951f7dc82cb43fe362145" category="list-text"><block ref="00a76af185a73b84e54e96058031aef5" category="inline-link-rx"></block></block>
   <block id="e1470cbc380c0e4285ea434aa1f30381" category="doc">SnapMirror 및 SnapVault 복제를 위한 스토리지 시스템 준비</block>
   <block id="e53c11d95478892635e2a7753106adc5" category="summary">호스트를 추가하고 플러그인 패키지를 설치하기 전에 모든 요구 사항을 완료해야 합니다.</block>
   <block id="690761e3a499ee562da842d3bd6f2db0" category="doc">호스트를 추가하고 Microsoft Exchange Server용 SnapCenter 플러그인을 설치하기 위한 사전 요구 사항</block>
@@ -8409,7 +8408,6 @@
   <block id="2a1a78f96ec6b03f3ccdd06b708e6f1a" category="list-text">(선택 사항) 재해 복구(DR) 백업에서 새 시스템으로 SQL Server용 SnapCenter 플러그인 구성 파일을 교체합니다.</block>
   <block id="9f2c74676fb5b339a2fd4a0ccd75bd1e" category="list-text">DR 백업에서 SnapCenter Plug-in for SQL Server 폴더에서 Windows 및 SQL 일정을 가져옵니다.</block>
   <block id="27e7993c4841ae5fd670cdd945ccb96d" category="inline-link-macro">재해 복구 API</block>
-  <block id="ab9238ca6f628634f6f6f2cf63502cdb" category="paragraph"><block ref="44de5c9fafab2e4e76e19e3717abc2e2" category="inline-link-macro-rx"></block>비디오를 참조하십시오.</block>
   <block id="a8827ae14ad272b19b5554bf29b0dd50" category="summary">SQL Server 운영 스토리지용 SnapCenter 플러그인이 다시 온라인 상태가 되면 운영 스토리지로 페일백해야 합니다.</block>
   <block id="c259d7aac6b257b97bf45bb54cdbfb28" category="doc">SnapCenter Plug-in for SQL Server 보조 스토리지에서 운영 스토리지로 페일백</block>
   <block id="7ffc5c3595639b4cfa7e25819a476178" category="list-text">관리 호스트 페이지의 * 유지 관리 * 모드로 SQL Server용 SnapCenter 플러그인을 배치합니다.</block>
@@ -9970,4 +9968,6 @@
   <block id="27c157ca432e76f965ac30465e4a7d94" category="paragraph">NLB(네트워크 부하 분산)를 구성하여 SnapCenter 고가용성을 설정할 수 있습니다. 고가용성을 위해 SnapCenter 설치 외부에서 NLB를 수동으로 구성해야 합니다.</block>
   <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">Oracle 및 SAP HANA 마운트 및 카탈로그 워크플로는 오브젝트 스토리지 백업용으로 지원되지 않지만 스냅샷에는 지원됩니다.</block>
   <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">Oracle PDB 클론은 오브젝트 스토리지 백업에는 지원되지 않지만 스냅샷에는 지원됩니다.</block>
+  <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
+  <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph"><block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block>비디오를 참조하십시오.</block>
 </blocks>
