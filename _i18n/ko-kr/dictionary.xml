@@ -9543,4 +9543,5 @@
   <block id="ae73a51250a46e35a8b765915ef7763a" category="paragraph">* 기본 스토리지의 백업 및 클론을 보여 주는 예 *</block>
   <block id="6fea498808c5d97bb251d0bdbc3943eb" category="sidebar">Linux 호스트에서 SnapCenter 플러그인 서비스에 대한 CA 인증서 구성</block>
   <block id="5c1418af1ce8eeaeb3745b659e1fcfe8" category="sidebar">Windows 호스트에서 SnapCenter 플러그인 서비스에 대한 CA 인증서 구성</block>
+  <block id="c0f10ba70433b3a51c779845827cf459" category="paragraph">Windows 클러스터 설정을 사용하는 경우 Windows 원격 관리(WinRM)도 설치하고 구성해야 합니다.</block>
 </blocks>
