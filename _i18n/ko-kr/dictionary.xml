@@ -2351,7 +2351,6 @@
   <block id="29e256a27c9d420cee02c5cda005de01" category="paragraph">다음 표에는 여러 포트와 해당 기본값이 나와 있습니다.</block>
   <block id="3672cca688eb0474cd3fee2add1a2067" category="cell">포트의 유형입니다</block>
   <block id="4d4690457f78e9e5cbfbcd0e36fbeff0" category="cell">기본 포트입니다</block>
-  <block id="ed00b70cc595a411eff2cc42510a291f" category="paragraph">SnapCenter 포트</block>
   <block id="b213e31ffc319fa7b61f00a8dfad6e75" category="paragraph">8146(HTTPS), 양방향, 사용자 지정 가능(URL_\https://server:8146_)</block>
   <block id="57f72d0cb40826596637a0e2fc16a647" category="paragraph">SnapCenter 클라이언트(SnapCenter 사용자)와 SnapCenter 서버 간의 통신에 사용됩니다. 플러그인 호스트에서 SnapCenter 서버로의 통신에도 사용됩니다.</block>
   <block id="c90d9871b4b86a10a62cd2bf2c1ea688" category="inline-link">설치 마법사를 사용하여 SnapCenter 서버를 설치합니다.</block>
@@ -9552,4 +9551,5 @@
   <block id="cc8f8aee65ee74fabf32da5ac0a4b95c" category="list-text">업그레이드가 실패하면 실패한 설치를 정리하고 이전 SnapCenter 버전을 다시 설치하고 NSM 데이터베이스를 이전 상태로 복원합니다.</block>
   <block id="88d9e24753477cfb09f25b21c0a59b9e" category="paragraph">SnapCenter 스냅샷 작업을 완료한 후 SnapMirror 와 SnapVault 에 대한 업데이트를 수행합니다.  SnapMirror 및 SnapVault 업데이트는 SnapCenter 작업의 일부로 수행됩니다.  SnapMirror 활성 동기화를 사용하는 경우 SnapMirror 활성 동기화와 비동기 관계 모두에 기본 SnapMirror 또는 SnapVault 일정을 사용하세요.</block>
   <block id="ea1c96f839915f73d25b910bbc92b734" category="list-text">NetApp 백업 및 복구 통합을 사용하여 ONTAP FAS, AFF 또는 ASA 기본 및 보조 시스템에 있는 데이터를 클라우드의 개체 및 아카이브 스토리지로 보호합니다.</block>
+  <block id="e6f36a956625505e0a3733e3e0073fa0" category="paragraph">SnapCenter 웹 포트</block>
 </blocks>

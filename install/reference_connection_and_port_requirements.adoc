@@ -37,7 +37,7 @@ SnapCenter 서버 및 응용 프로그램 또는 데이터베이스 플러그인
 
 
  a| 
-SnapCenter 포트
+SnapCenter 웹 포트
  a| 
 8146(HTTPS), 양방향, 사용자 지정 가능(URL_\https://server:8146_)
 
