@@ -373,7 +373,6 @@
   <block id="6d2bf94f38d1fdf840fe9b231866899c" category="inline-link">구축 개요</block>
   <block id="95d04783b89b5d5f8a4c905e6a139950" category="paragraph">배포에 대한 자세한 내용은 을<block ref="09fdd78e4c4f2997a9baa6b6e4423d52" category="inline-link-rx"></block>참조하십시오.</block>
   <block id="c9abc3786b4bb68c9d780c7e265731ff" category="inline-link">SSL 인증서를 생성하거나 가져옵니다</block>
-  <block id="77e6d176ef9b9d439f75a9636390005d" category="paragraph">VMware vSphere용 SnapCenter 플러그인을 사용하여 CA 인증서를 구성하려면 를 참조하십시오<block ref="1b5e247395791063ff5d33fa4a1ba4ec" category="inline-link-rx"></block>.</block>
   <block id="3228309100966454e78a162d4ba9bd75" category="section-title">CRL 파일을 구성합니다</block>
   <block id="456dce50d13fcf7c2c4881e39c114254" category="paragraph">VMware vSphere용 SnapCenter 플러그인은 사전 구성된 디렉토리에서 CRL 파일을 찾습니다. VMware vSphere용 SnapCenter 플러그인의 기본 CRL 파일 디렉토리는 _/opt/netapp/config/CRL_ 입니다.</block>
   <block id="2794927004b00b8d766ca3deca4c7096" category="paragraph">SnapCenterJobs 페이지를 사용하여 여러 백업 작업의 진행률을 모니터링할 수 있습니다. 진행 상황을 확인하여 완료 시기 또는 문제가 있는지 확인할 수 있습니다.</block>
@@ -1713,8 +1712,6 @@
   <block id="b88dbedd8fcea13adf629d85780a25e4" category="list-text">Windows용 플러그인은 Microsoft 클러스터의 가상 시스템에서 MPIO를 지원하지 않습니다.</block>
   <block id="5010ac065b072d3a5a66d4913af22358" category="section-title">공유 FC RDM LUN을 생성합니다</block>
   <block id="10680a7aa79949d8b454b29a782cc64a" category="paragraph">FC RDM LUN을 사용하여 Microsoft 클러스터의 노드 간에 스토리지를 공유하려면 먼저 공유 쿼럼 디스크와 공유 스토리지 디스크를 생성한 다음 클러스터의 두 가상 머신에 추가해야 합니다.</block>
-  <block id="cbdb6828febec04786f22df9a1ccc748" category="inline-link">물리적 호스트에서 가상 시스템을 클러스터링합니다</block>
-  <block id="343e62dffb88999e9c503088341e1fc0" category="paragraph">Windows용 플러그인을 사용하여 공유 디스크가 생성되지 않습니다. 공유 LUN을 생성한 다음 클러스터의 각 가상 머신에 추가해야 합니다. 자세한 내용은 을<block ref="4339506e2feb8115940eea5a6e9ba248" category="inline-link-rx"></block>참조하십시오.</block>
   <block id="c939b5dd7dddc4f1908d7f58a2ab351d" category="summary">SnapCenter에서는 데이터 보호 작업을 위해 여러 개의 라이센스가 필요합니다. 설치하는 SnapCenter 라이센스 유형은 스토리지 환경과 사용하려는 기능에 따라 다릅니다.</block>
   <block id="07cdb1cc7dcc527060e65d98659cb1d4" category="doc">SnapCenter 라이센스</block>
   <block id="03d6fc6f0007d8c1e15a56f0a4522686" category="paragraph">SnapCenter에는 애플리케이션, 데이터베이스, 파일 시스템 및 가상 머신의 데이터 보호를 위해 몇 가지 라이센스가 필요합니다. 설치하는 SnapCenter 라이센스 유형은 스토리지 환경과 사용하려는 기능에 따라 다릅니다.</block>
@@ -2464,10 +2461,6 @@
   <block id="cb6ddd90b08469e2479460ec34538fe2" category="list-text">HTTP 활성화</block>
   <block id="9756c6d75626032c8da05d425c1d0ca9" category="inline-link">인터넷에 연결되지 않은 기존 시스템의 경우 SnapCenter 업그레이드 또는 설치가 실패합니다</block>
   <block id="462fbac4d281be78bedf063a9dbd9f61" category="paragraph">의 경우. 자세한 문제 해결 정보는 을 참조하십시오<block ref="b173f6267e94bec8cf82a1d95b991ed7" category="inline-link-rx"></block>.</block>
-  <block id="c3dbd8c35d4829310dd57365a749f10f" category="paragraph">메시지 큐</block>
-  <block id="9c7750973d73f078f45c6bfd80cbfc85" category="list-text">메시지 큐 서비스</block>
-  <block id="be0efd214f0b56cf8372d18ec1837f53" category="admonition">SnapCenter가 만들고 관리하는 MSMQ 서비스를 사용하는 다른 응용 프로그램이 없는지 확인합니다.</block>
-  <block id="7eaa993723e57b3bfc99923c196e2e17" category="list-text">RabbitMQ입니다</block>
   <block id="a8e1305e0c86caf1fec261807b3362ef" category="paragraph">Windows 프로세스 활성화 서비스</block>
   <block id="494ecde4fb6ee77e99799902ed23cd14" category="list-text">프로세스 모델</block>
   <block id="293616622aeda675821b42e39b4d4e7b" category="paragraph">구성 API</block>
@@ -3078,9 +3071,7 @@
   <block id="ac91c641781bd7c7379113e123abc706" category="doc">인증서 기반 인증을 사용합니다</block>
   <block id="2deb2b431122c2428813248c5cc7e3cf" category="paragraph">SnapCenter 서버 및 Windows 플러그인 호스트에 대한 인증서 기반 인증을 활성화하려면 다음 PowerShell cmdlet을 실행합니다. Linux 플러그인 호스트의 경우 양방향 SSL을 활성화하면 인증서 기반 인증이 활성화됩니다.</block>
   <block id="012d451c2966c8058914f66afd3ff9be" category="list-text">클라이언트 인증서 기반 인증을 사용하려면 다음을 따르십시오.</block>
-  <block id="c7414a7d4890863a34509bebe1bd9225" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="a71cdd4660400fab236be52b25300411" prefix=" " category="inline-code"></block></block>
   <block id="8b5db05d124326542535790d2a1a0411" category="list-text">클라이언트 인증서 기반 인증을 사용하지 않도록 설정하려면 다음을 따르십시오.</block>
-  <block id="b5cfca9930b60b6f87f38ad0e8d31765" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="b1b73520f4b4ea4d2583cc59029bbe0d" prefix=" " category="inline-code"></block></block>
   <block id="ea57705c00c3f1344bb41c72a946f63e" category="summary">PowerShell 명령을 사용하여 Windows 호스트의 SnapCenter 서버와 플러그인 간의 상호 통신을 보호하기 위해 양방향 SSL 통신을 설정할 수 있습니다.</block>
   <block id="fb1f4d52b01df105765d83ddca95f1be" category="doc">Windows 호스트에서 양방향 SSL 통신을 활성화합니다</block>
   <block id="e087a1e7d63b58aa401ef5206b4045df" category="paragraph">모든 플러그인 및 SMCore 에이전트에 대한 명령을 먼저 실행한 다음 서버에 대해 명령을 실행합니다.</block>
@@ -7535,8 +7526,6 @@
   <block id="3eee6ccd820abf187846b44912303266" category="inline-link-macro">SQL Server 데이터베이스 백업에서 복제합니다</block>
   <block id="a121a292ca8a39c5591cdcc69d0f0ff8" category="paragraph"><block ref="a121a292ca8a39c5591cdcc69d0f0ff8" category="inline-link-macro-rx"></block></block>
   <block id="b5fb765366530fd4f75c7c5c651544bd" category="paragraph"><block ref="b5fb765366530fd4f75c7c5c651544bd" category="inline-link-macro-rx"></block></block>
-  <block id="68f8e37f5b3d7c3c6c34a481b33a736f" category="inline-link-macro">클론 작업이 실패하거나 기본 TCP_TIMEOUT 값으로 완료하는 데 시간이 더 오래 걸릴 수 있습니다</block>
-  <block id="5f2b3d8994098e5cded686a40b8bb7c9" category="paragraph"><block ref="5f2b3d8994098e5cded686a40b8bb7c9" category="inline-link-macro-rx"></block></block>
   <block id="e120fc76fd23e12235b495bc6454901a" category="doc">SQL 플러그인에 필요한 최소 ONTAP 권한</block>
   <block id="f9769cb6db4dd2d01611ef4c2e69e554" category="doc">SnapMirror 및 SnapVault 복제를 위한 스토리지 시스템을 SQL Server용 플러그인으로 준비합니다</block>
   <block id="f9ba38b961aca7823da15b938828b64f" category="doc">사전 요구 사항 - 호스트를 추가하고 Microsoft SQL Server용 SnapCenter 플러그인을 설치합니다</block>
@@ -7717,11 +7706,7 @@
   <block id="5891deda92209d1d45144775b7d5c20d" category="admonition">Windows 스케줄러 또는 SQL Server 에이전트에서 생성된 백업 작업의 이름은 바꾸지 않아야 합니다.</block>
   <block id="1ca9ef3a64115b9b5155a63404740914" category="paragraph">암시적 리소스 그룹이 만들어집니다. 사용자 액세스 페이지에서 해당 사용자 또는 그룹을 선택하여 이 정보를 볼 수 있습니다. 암시적 리소스 그룹 유형은 "리소스"입니다.</block>
   <block id="50e1edb21a598f492619b01f99e77a4f" category="paragraph"><block ref="50e1edb21a598f492619b01f99e77a4f" category="inline-link-macro-rx"></block></block>
-  <block id="db9c751c1327ee48b470f3140421daf6" category="inline-link">TCP_TIMEOUT의 지연으로 인해 MySQL 연결 오류로 인해 백업 작업이 실패합니다</block>
-  <block id="0cd607c6c3ab41f1a5532b188171495c" category="paragraph"><block ref="0cd607c6c3ab41f1a5532b188171495c" category="inline-link-rx"></block></block>
   <block id="c473dc65af16d92c688e88cffad5b825" category="inline-link">Windows 스케줄러 오류로 인해 백업이 실패합니다</block>
-  <block id="ee70f525f7b0b70b3e7de9d8f872cbe4" category="paragraph"><block ref="ee70f525f7b0b70b3e7de9d8f872cbe4" category="inline-link-rx"></block></block>
-  <block id="393997bd3b722d52ae03ce598aa5cfec" category="paragraph"><block ref="393997bd3b722d52ae03ce598aa5cfec" category="inline-link-rx"></block></block>
   <block id="e12e035acf67bf5c7809b2d4af7617f9" category="paragraph">검색 상자에 자원 그룹 이름을 입력하거나 * * 를 선택한 다음 태그를 선택하여 자원 그룹을 검색할 수<block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>있습니다. 그런 다음 * * 를 선택하여 필터 창을 닫을 수<block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>있습니다.</block>
   <block id="8e927494c3186b26a3de09d9578e731f" category="paragraph">정책의 * Verify * 옵션은 예약된 작업에만 적용됩니다.</block>
   <block id="9b51fddaf011faab92bf06f41ccf6d11" category="inline-link-macro">리소스 그룹을 만들고 SQL Server에 대한 정책을 연결합니다</block>
@@ -7771,9 +7756,7 @@
   <block id="cd580f0c35d4c37236f3153c15452b6f" category="paragraph">기본 스크립트 시간 초과는 60초입니다.</block>
   <block id="4b70ba28cecacc0b972de64bf00eafac" category="paragraph">EMS의 경우 을 참조하십시오<block ref="6a6cc2b71a11174970b94b5318ade705" category="inline-link-rx"></block></block>
   <block id="b8ceb1eaf0d60af03679989562024d6b" category="paragraph">클론이 생성된 후에는 이름을 바꿀 수 없습니다.</block>
-  <block id="f7e7f0dd9d36aec3d609775de2dbbd0b" category="paragraph"><block ref="f7e7f0dd9d36aec3d609775de2dbbd0b" category="inline-link-rx"></block></block>
   <block id="1e9ab426973a56020f8d1db85cb07f06" category="inline-link">장애 조치 클러스터 인스턴스 데이터베이스 클론에 장애가 발생합니다</block>
-  <block id="2df5362c7aa8c12a0dd2f1b211cdf61d" category="paragraph"><block ref="2df5362c7aa8c12a0dd2f1b211cdf61d" category="inline-link-rx"></block></block>
   <block id="d46bdc3a4fe241badafb83ade1e31452" category="summary">각 사용자에 대해 개별 SQL Server 리소스에 대해 데이터 보호 작업을 수행하도록 자격 증명을 구성할 수 있습니다.</block>
   <block id="78cb0d244e4320583b51cc8da36e130e" category="doc">개별 SQL Server 리소스에 대한 자격 증명을 구성합니다</block>
   <block id="82ebbd4916aa80b290bf59524e5e173b" category="paragraph">각 사용자에 대해 개별 SQL Server 리소스에 대해 데이터 보호 작업을 수행하도록 자격 증명을 구성할 수 있습니다. 자격 증명을 전역적으로 구성할 수 있지만 특정 리소스에 대해서만 구성할 수 있습니다.</block>
@@ -9552,4 +9535,13 @@
   <block id="88d9e24753477cfb09f25b21c0a59b9e" category="paragraph">SnapCenter 스냅샷 작업을 완료한 후 SnapMirror 와 SnapVault 에 대한 업데이트를 수행합니다.  SnapMirror 및 SnapVault 업데이트는 SnapCenter 작업의 일부로 수행됩니다.  SnapMirror 활성 동기화를 사용하는 경우 SnapMirror 활성 동기화와 비동기 관계 모두에 기본 SnapMirror 또는 SnapVault 일정을 사용하세요.</block>
   <block id="ea1c96f839915f73d25b910bbc92b734" category="list-text">NetApp 백업 및 복구 통합을 사용하여 ONTAP FAS, AFF 또는 ASA 기본 및 보조 시스템에 있는 데이터를 클라우드의 개체 및 아카이브 스토리지로 보호합니다.</block>
   <block id="e6f36a956625505e0a3733e3e0073fa0" category="paragraph">SnapCenter 웹 포트</block>
+  <block id="92f7e9adcc0061bde4c2abd78f00e01e" category="paragraph">SnapCenter Plug-in for VMware vSphere에서 CA 인증서를 구성하려면 <block ref="e0ef04da7ad7ee6e29cb49ed5497582e" category="inline-link-rx"></block>를 참조하십시오.</block>
+  <block id="1e70ac4737c2e839c6fd901789e3bafb" category="paragraph">공유 디스크는 Plug-in for Windows를 사용하여 생성되지 않습니다. 공유 LUN을 생성한 다음 클러스터의 각 가상 머신에 추가해야 합니다.</block>
+  <block id="ae0aa1a81eb18e69d5fc662eaee0efd5" category="inline-link">Broadcom 기술 문서</block>
+  <block id="e3b8e6a8b23425a59add498ed0e47659" category="paragraph"><block ref="94f03a61d7283013b50d8cc8e88c9fd8" category="inline-link-rx"></block>를 참조하여 물리적 호스트에 걸쳐 가상 머신을 클러스터링하고 Microsoft 클러스터용 공유 FC RDM LUN을 생성하는 방법에 대한 문서를 검색하십시오.</block>
+  <block id="0ff275ffe02e672fcd7c5215c9cbcfb6" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
+  <block id="11428fc511268a2c63fa0e7ebcb2530d" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
+  <block id="fb322b1c90de9bc9209933a55dc7c3a1" category="paragraph"><block ref="fb322b1c90de9bc9209933a55dc7c3a1" category="inline-link-rx"></block></block>
+  <block id="76d78c694f90915981830809ea4ed0ea" category="paragraph"><block ref="76d78c694f90915981830809ea4ed0ea" category="inline-link-rx"></block></block>
+  <block id="654bb6446b6bf43b65f5a763bbc17afe" category="paragraph"><block ref="654bb6446b6bf43b65f5a763bbc17afe" category="inline-link-rx"></block></block>
 </blocks>
